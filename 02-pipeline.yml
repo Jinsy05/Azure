@@ -13,7 +13,8 @@ stages:
   jobs:
   - job: FirstJob
     steps: 
-    - bash: echo build first job 
+    - bash: echo build first job
+    - bash: echo $(PIPELINELEVELVARIABLE) 
   - job: SecondJob
     steps: 
     - bash: echo build second job 

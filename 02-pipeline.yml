@@ -15,13 +15,13 @@ stages:
     steps: 
     - bash: echo build first job
     - bash: echo $(PIPELINELEVELVARIABLE) 
-    - bash: echo ${Build.BuildNumber}
-    - bash: echo ${Build.BuildId}
-    - bash: echo ${Build.SourcesDirectory}
-    - bash: echo ${Build.SourceBranchName}
-    - bash: echo ${System.DefaultWorkignDirectory}
-    - bash: ls -R ${System.DefaultWorkignDirectory}
-    - bash: echo ${Build.ArtifactStagingDirectory}
+    - bash: echo $(Build.BuildNumber)
+    - bash: echo $(Build.BuildId)
+    - bash: echo $(Build.SourcesDirectory)
+    - bash: echo $(Build.SourceBranchName)
+    - bash: echo $(System.DefaultWorkignDirectory)
+    - bash: ls -R $(System.DefaultWorkignDirectory)
+    - bash: echo $(Build.ArtifactStagingDirectory)
   # - job: SecondJob
   #   steps: 
   #   - bash: echo build second job 

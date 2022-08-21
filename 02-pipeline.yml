@@ -22,6 +22,10 @@ stages:
     - bash: echo $(System.DefaultWorkignDirectory)
     - bash: ls -R $(System.DefaultWorkignDirectory)
     - bash: echo $(Build.ArtifactStagingDirectory)
+    - bash: java -version
+    - bash: node --version
+    - bash: python --version
+    - bash: mvn -version
   # - job: SecondJob
   #   steps: 
   #   - bash: echo build second job 

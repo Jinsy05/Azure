@@ -13,16 +13,14 @@ pool:
 
 stages:
 - stage: Build
-    jobs:
+  jobs:
     - job: BuildJob
       steps:
       - bash: echo " build job"
 - stage: DevDeploy
     jobs:
-    - job: startDevDeploy
-      steps:
-      - bash: echo " dev deploy  job"
     - deployment: DevDeployJob
+      environment: dev
       strategy: 
         runOnce:
           deploy:
@@ -31,10 +29,8 @@ stages:
 
 - stage: QADeploy
     jobs:
-    - job: startQADeploy
-      steps:
-      - bash: echo " QA deploy  job"
     - deployment: QADeployJob
+      environment: qa
       strategy: 
         runOnce:
           deploy:

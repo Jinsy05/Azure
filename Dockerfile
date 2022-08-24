@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 ARG TERRAFORM_VERSION
-#ENV TERRAFORM_VERSION=0.13.0
+ENV TERRAFORM_VERSION=0.13.0
 RUN \
 # Update
 apt-get update -y && \
@@ -26,4 +26,4 @@ RUN mv terraform /usr/local/bin/
 # Check that it's installed
 RUN terraform --version
 
-CMD ["sleep", "infinity"]
+#CMD ["sleep", "infinity"]
